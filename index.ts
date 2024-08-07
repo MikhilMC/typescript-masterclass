@@ -1,90 +1,146 @@
 /**
- * PRIMITIVE TYPES
+ * any type
  */
+let firstName: any = "Mark";
 
-/*
- * String types
- */
+firstName = 123;
+firstName = [];
 
-var firstName: string = "John";
-firstName = 1; // Type 'number' is not assignable to type 'string'
-let automobile = "BMW";
-const city = "New York";
-let students = 32;
-let studentsAsString: string = students.toString();
-
-/*
- * Number types
- */
-// var age: number = 32;
-let year: number = 2024;
-const numberOfMembers = 61;
-// numberOfMembers = 128;  // Cannot assign to 'numberOfMembers' because it is a constant.
-let stringToNumber: number = parseInt("1985");
-
-/*
- * Booleans
- */
-// var isStudent: boolean = false;
-const alwaysStudent = true;
-let minimumAge: boolean = age >= 6 ? true : false;
-
-/*
- * null and undefined
- */
-// let user: undefined;
-// console.log(user);
-
-let userRole: null;
-console.log(userRole); // Variable 'userRole' is used before being assigned
-userRole = null;
-console.log(userRole);
-console.log(userRole === user);
-
-if (!userRole) {
-  console.log("This condition is true");
-}
-
-if (!user) {
-  console.log("This condition is true");
+function returnParam(param) {
+  // Parameter 'param' implicitly has an 'any' type.
+  return param;
 }
 
 /**
- * Bigint
+ * unknown type
  */
-const safeInt = Number.MAX_SAFE_INTEGER;
-console.log(safeInt);
-const safeIntPlusOne = safeInt + 1;
-const safeIntPlusTwo = safeInt + 2;
-console.log(safeIntPlusOne);
-console.log(safeIntPlusTwo);
+function multiplyByTwo(number: unknown) {
+  //   return number * 2;
+  if (typeof number === "number") {
+    return number * 2;
+  }
 
-let bigInt1: bigint = BigInt(1234);
-let bigint2: bigint = 123434543n;
-console.log(bigInt1);
-console.log(bigint2);
+  return "Please provide a valid number";
+}
 
-let c: bigint = bigInt1 - bigint2;
-
-// let d: bigint = 12345.6n;   // A bigint literal must be an integer.
-
-// let f = Math.log(bigInt1); // Argument of type 'bigint' is not assignable to parameter of type 'number'.
+console.log(multiplyByTwo(4));
+console.log(multiplyByTwo("string"));
 
 /**
- * Symbol
+ * Type alias
  */
-let id: symbol = Symbol(1234);
-let alphabeticId: symbol = Symbol("id");
+// Date;
+// Array;
+// Map;
+// Set;
+// Promise;
+// RegExp;
+// Error;
+// Function;
+// Symbol;
+// WeakMap;
+// WeakSet;
 
-let user2 = {
-  [id]: "1234",
-  name: "Mark",
-  getId() {
-    return this[id];
-  },
+/**
+ * Declaration, Annotation, Inference
+ */
+
+// Duck Typing is used by TypeScript for inference of types.
+//* "If it walks like a duck and quacks like a duck, it's a duck".
+
+// Declaration - when you are declaring a type.
+type CustomString = string;
+type CustomNumber = number;
+type CustomDate = Date;
+type CustomSymbol = symbol;
+
+// Annotation - when you are assigning a type.
+let firstName2: CustomString = "Mark";
+let age: CustomNumber = 31;
+let today: CustomDate = new Date();
+let unique: CustomSymbol = Symbol();
+
+function addNumbers(a: number, b: number) {
+  return a + b;
+}
+
+// Inference - When TypeScript able to infer the correct type of a variable or declaration
+let finalResult = addNumbers(2, 3);
+
+// Whenever the type is complex, declare it.
+// Whenever the type is simple, annotate it.
+
+/**
+ * Union types
+ */
+type StringOrNumber = string | number;
+type NumberOrUndefined = number | undefined;
+type StringNumberOrUndefined = string | number | undefined;
+type DateOrUndefined = Date | undefined;
+
+let stringOrNumber: StringOrNumber = 1234;
+
+function print(input: string | undefined) {
+  if (input) {
+    console.log(input);
+  } else {
+    console.log("Please input something to print");
+  }
+}
+
+print();
+print("Hello World!");
+
+/**
+ * Conditional Types
+ */
+type CustomDate2 = Date;
+type CustomString2 = string;
+
+type TrueString = CustomString2 extends string ? true : false;
+type ConditionalNumber = CustomDate2 extends Date ? number : string;
+type DateAssignment = CustomDate2 extends Date ? Date : undefined;
+
+/**
+ * Type Hierarchy
+ */
+type check = any extends unknown ? true : false;
+type check2 = string extends any ? true : false;
+type check3 = null extends any ? true : false;
+type check4 = undefined extends void ? true : false;
+type check5 = [] extends Object ? true : false;
+type check6 = Function extends Object ? true : false;
+
+const throwError = (errorMessage: string) => {
+  // throwError returns the type never
+  throw new Error(errorMessage);
 };
 
-console.log(user2.name);
-console.log(user2.id); // Property 'id' does not exist on type '{ [x: symbol]: string; name: string; }'.
-console.log(id);
-console.log(user2.getId());
+// let strings:Object = ["a", "b"]  // This is acceptable according to TypeScript
+let strings: string[] = ["a", "b"]; // But this is more suitable one
+
+let myFunc: Function = () => 2;
+// let myFunc: Object = () => 2;
+
+/**
+ * Type Casting
+ */
+let firstName3 = <any>"John";
+let lastName = "Doe" as any;
+
+// User from API
+let user = {
+  name: "Mark",
+  email: "mark@email.com",
+};
+
+type User = {
+  name: string;
+  email: string;
+};
+
+function fetchUser() {
+  return user as User;
+}
+
+let fetchedUser = fetchUser();

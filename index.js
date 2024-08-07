@@ -1,75 +1,66 @@
 "use strict";
 /**
- * PRIMITIVE TYPES
+ * any type
  */
-/*
- * String types
- */
-var firstName = "John";
-firstName = 1; // Type 'number' is not assignable to type 'string'
-let automobile = "BMW";
-const city = "New York";
-let students = 32;
-let studentsAsString = students.toString();
-/*
- * Number types
- */
-// var age: number = 32;
-let year = 2024;
-const numberOfMembers = 61;
-// numberOfMembers = 128;  // Cannot assign to 'numberOfMembers' because it is a constant.
-let stringToNumber = parseInt("1985");
-/*
- * Booleans
- */
-// var isStudent: boolean = false;
-const alwaysStudent = true;
-let minimumAge = age >= 6 ? true : false;
-/*
- * null and undefined
- */
-// let user: undefined;
-// console.log(user);
-let userRole;
-console.log(userRole); // Variable 'userRole' is used before being assigned
-userRole = null;
-console.log(userRole);
-console.log(userRole === user);
-if (!userRole) {
-    console.log("This condition is true");
-}
-if (!user) {
-    console.log("This condition is true");
+let firstName = "Mark";
+firstName = 123;
+firstName = [];
+function returnParam(param) {
+    // Parameter 'param' implicitly has an 'any' type.
+    return param;
 }
 /**
- * Bigint
+ * unknown type
  */
-const safeInt = Number.MAX_SAFE_INTEGER;
-console.log(safeInt);
-const safeIntPlusOne = safeInt + 1;
-const safeIntPlusTwo = safeInt + 2;
-console.log(safeIntPlusOne);
-console.log(safeIntPlusTwo);
-let bigInt1 = BigInt(1234);
-let bigint2 = 123434543n;
-console.log(bigInt1);
-console.log(bigint2);
-let c = bigInt1 - bigint2;
-// let d: bigint = 12345.6n;   // A bigint literal must be an integer.
-// let f = Math.log(bigInt1); // Argument of type 'bigint' is not assignable to parameter of type 'number'.
-/**
- * Symbol
- */
-let id = Symbol(1234);
-let alphabeticId = Symbol("id");
-let user2 = {
-    [id]: "1234",
-    name: "Mark",
-    getId() {
-        return this[id];
-    },
+function multiplyByTwo(number) {
+    //   return number * 2;
+    if (typeof number === "number") {
+        return number * 2;
+    }
+    return "Please provide a valid number";
+}
+console.log(multiplyByTwo(4));
+console.log(multiplyByTwo("string"));
+// Annotation - when you are assigning a type.
+let firstName2 = "Mark";
+let age = 31;
+let today = new Date();
+let unique = Symbol();
+function addNumbers(a, b) {
+    return a + b;
+}
+// Inference - When TypeScript able to infer the correct type of a variable or declaration
+let finalResult = addNumbers(2, 3);
+let stringOrNumber = 1234;
+function print(input) {
+    if (input) {
+        console.log(input);
+    }
+    else {
+        console.log("Please input something to print");
+    }
+}
+print();
+print("Hello World!");
+const throwError = (errorMessage) => {
+    // throwError returns the type never
+    throw new Error(errorMessage);
 };
-console.log(user2.name);
-console.log(user2.id); // Property 'id' does not exist on type '{ [x: symbol]: string; name: string; }'.
-console.log(id);
-console.log(user2.getId());
+// let strings:Object = ["a", "b"]  // This is acceptable according to TypeScript
+let strings = ["a", "b"]; // But this is more suitable one
+let myFunc = () => 2;
+// let myFunc: Object = () => 2;
+/**
+ * Type Casting
+ */
+let firstName3 = "John";
+let lastName = "Doe";
+// User from API
+let user = {
+    name: "Mark",
+    email: "mark@email.com",
+};
+function fetchUser() {
+    return user;
+}
+let fetchedUser = fetchUser();
