@@ -1,12 +1,18 @@
 "use strict";
+let city = "New York"; // string
+let population = 8400000; // number
+const age2 = 32; // 32
+let oldAge = 79; // 79
+let newAge = oldAge; // 79
+let data = new Map(); // Map<any, any>
+let score = [90, 86, 100];
 /**
- * Assign the correct types to each of the following variables
- * Solution
- */
-let message = "Hello, TypeScript!";
-let age = 42;
-let isStudent = true;
-let fetched = null;
-let user = undefined;
-let largeNumber = 9007199254740991n;
-let unique = Symbol("uniqueSymbol");
+ * Are the following statements valid
+ * Check if below lines of code are valid as per TypeScript or not without uncommenting them
+ *  */
+// age2 = 85;   - invalid
+// score.push(10);  - valid
+// score.push("New Score"); - invalid
+// let customAge: CustomAge = 50;   - invalid
+// let primitive: Primitive = new Date();   - invalid
+// let years: CheckScore = [];  - valid
