@@ -1,66 +1,147 @@
 "use strict";
 /**
- * any type
+ * OBJECTS
  */
-let firstName = "Mark";
-firstName = 123;
-firstName = [];
-function returnParam(param) {
-    // Parameter 'param' implicitly has an 'any' type.
-    return param;
-}
 /**
- * unknown type
+ * Working with objects
  */
-function multiplyByTwo(number) {
-    //   return number * 2;
-    if (typeof number === "number") {
-        return number * 2;
-    }
-    return "Please provide a valid number";
-}
-console.log(multiplyByTwo(4));
-console.log(multiplyByTwo("string"));
-// Annotation - when you are assigning a type.
-let firstName2 = "Mark";
-let age = 31;
-let today = new Date();
-let unique = Symbol();
-function addNumbers(a, b) {
-    return a + b;
-}
-// Inference - When TypeScript able to infer the correct type of a variable or declaration
-let finalResult = addNumbers(2, 3);
-let stringOrNumber = 1234;
-function print(input) {
-    if (input) {
-        console.log(input);
-    }
-    else {
-        console.log("Please input something to print");
-    }
-}
-print();
-print("Hello World!");
-const throwError = (errorMessage) => {
-    // throwError returns the type never
-    throw new Error(errorMessage);
-};
-// let strings:Object = ["a", "b"]  // This is acceptable according to TypeScript
-let strings = ["a", "b"]; // But this is more suitable one
-let myFunc = () => 2;
-// let myFunc: Object = () => 2;
-/**
- * Type Casting
- */
-let firstName3 = "John";
-let lastName = "Doe";
-// User from API
-let user = {
+let person = {
     name: "Mark",
-    email: "mark@email.com",
+    age: 32,
 };
-function fetchUser() {
-    return user;
+let car = {
+    brand: "BMW",
+    color: "Black",
+};
+// not needed
+car = [];
+car = () => { };
+let newCar = {
+    brand: "Audi",
+    color: "White",
+};
+newCar = [];
+/**
+ * Type alias for objects
+ */
+let post = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+};
+let post2 = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+};
+let post3 = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+    author: {
+        name: "John",
+        age: 28,
+        email: "john@doe.com",
+    },
+};
+let post4 = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+    author: {
+        name: "John",
+        age: 28,
+        email: "john@doe.com",
+    },
+    awards: {
+        web: {
+            name: "Web awards",
+            date: new Date(),
+        },
+        web3: {
+            name: "Web 3",
+            date: new Date(),
+        },
+    },
+};
+let post5 = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+    author: {
+        name: "John",
+        age: 28,
+        email: "john@doe.com",
+        type: "human",
+    },
+    awards: {
+        web: {
+            name: "Web awards",
+            date: new Date(),
+        },
+        web3: {
+            name: "Web 3",
+            date: new Date(),
+        },
+    },
+    category: "javascript",
+};
+let post6 = {
+    title: "This is the title of the blog post",
+    content: "This is the content of the post",
+    date: new Date(),
+    author: {
+        name: "John",
+        age: 28,
+        email: "john@doe.com",
+        type: "human",
+    },
+    awards: {
+        web: {
+            name: "Web awards",
+            date: new Date(),
+        },
+        web3: {
+            name: "Web 3",
+            date: new Date(),
+        },
+    },
+};
+post6.author.type = "ai";
+let dog = {
+    name: "Buddy",
+    barks: true,
+    wags: true,
+};
+let cat = {
+    name: "Bella",
+    purrs: true,
+};
+let hybridAnimal = {
+    name: "Bob",
+    barks: true,
+    wags: true,
+    purrs: true,
+};
+let partialDog = {
+    name: "Blacky",
+    barks: true,
+};
+function logger(state) {
+    switch (state.state) {
+        case "loading":
+            return "Loading...";
+        case "failed":
+            return `Error ${state.code}`;
+        case "success":
+            return `Downloading ${state.response.title}`;
+        default:
+            break;
+    }
 }
-let fetchedUser = fetchUser();
+let hybridAnimal2 = {
+    name: "Max",
+    color: "White",
+    purrs: false,
+    barks: true,
+};
