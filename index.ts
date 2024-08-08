@@ -1,146 +1,314 @@
 /**
- * any type
+ * OBJECTS
  */
-let firstName: any = "Mark";
-
-firstName = 123;
-firstName = [];
-
-function returnParam(param) {
-  // Parameter 'param' implicitly has an 'any' type.
-  return param;
-}
 
 /**
- * unknown type
- */
-function multiplyByTwo(number: unknown) {
-  //   return number * 2;
-  if (typeof number === "number") {
-    return number * 2;
-  }
-
-  return "Please provide a valid number";
-}
-
-console.log(multiplyByTwo(4));
-console.log(multiplyByTwo("string"));
-
-/**
- * Type alias
- */
-// Date;
-// Array;
-// Map;
-// Set;
-// Promise;
-// RegExp;
-// Error;
-// Function;
-// Symbol;
-// WeakMap;
-// WeakSet;
-
-/**
- * Declaration, Annotation, Inference
+ * Working with objects
  */
 
-// Duck Typing is used by TypeScript for inference of types.
-//* "If it walks like a duck and quacks like a duck, it's a duck".
-
-// Declaration - when you are declaring a type.
-type CustomString = string;
-type CustomNumber = number;
-type CustomDate = Date;
-type CustomSymbol = symbol;
-
-// Annotation - when you are assigning a type.
-let firstName2: CustomString = "Mark";
-let age: CustomNumber = 31;
-let today: CustomDate = new Date();
-let unique: CustomSymbol = Symbol();
-
-function addNumbers(a: number, b: number) {
-  return a + b;
-}
-
-// Inference - When TypeScript able to infer the correct type of a variable or declaration
-let finalResult = addNumbers(2, 3);
-
-// Whenever the type is complex, declare it.
-// Whenever the type is simple, annotate it.
-
-/**
- * Union types
- */
-type StringOrNumber = string | number;
-type NumberOrUndefined = number | undefined;
-type StringNumberOrUndefined = string | number | undefined;
-type DateOrUndefined = Date | undefined;
-
-let stringOrNumber: StringOrNumber = 1234;
-
-function print(input: string | undefined) {
-  if (input) {
-    console.log(input);
-  } else {
-    console.log("Please input something to print");
-  }
-}
-
-print();
-print("Hello World!");
-
-/**
- * Conditional Types
- */
-type CustomDate2 = Date;
-type CustomString2 = string;
-
-type TrueString = CustomString2 extends string ? true : false;
-type ConditionalNumber = CustomDate2 extends Date ? number : string;
-type DateAssignment = CustomDate2 extends Date ? Date : undefined;
-
-/**
- * Type Hierarchy
- */
-type check = any extends unknown ? true : false;
-type check2 = string extends any ? true : false;
-type check3 = null extends any ? true : false;
-type check4 = undefined extends void ? true : false;
-type check5 = [] extends Object ? true : false;
-type check6 = Function extends Object ? true : false;
-
-const throwError = (errorMessage: string) => {
-  // throwError returns the type never
-  throw new Error(errorMessage);
-};
-
-// let strings:Object = ["a", "b"]  // This is acceptable according to TypeScript
-let strings: string[] = ["a", "b"]; // But this is more suitable one
-
-let myFunc: Function = () => 2;
-// let myFunc: Object = () => 2;
-
-/**
- * Type Casting
- */
-let firstName3 = <any>"John";
-let lastName = "Doe" as any;
-
-// User from API
-let user = {
+let person = {
   name: "Mark",
-  email: "mark@email.com",
+  age: 32,
 };
 
-type User = {
+let car: Object = {
+  brand: "BMW",
+  color: "Black",
+};
+
+// not needed
+car = [];
+car = () => {};
+
+let newCar: {
+  brand: string;
+  color: string;
+} = {
+  brand: "Audi",
+  color: "White",
+};
+
+newCar = [];
+
+/**
+ * Type alias for objects
+ */
+let post: {
+  title: string;
+  content: string;
+  date: Date;
+} = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+};
+
+type Post = {
+  title: string;
+  content: string;
+  date: Date;
+};
+
+let post2: Post = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+};
+
+/**
+ * Nested objects
+ */
+
+// type Post2 = {
+//   title: string;
+//   content: string;
+//   date: Date;
+//   author: {
+//     name: string;
+//     age: number;
+//     email: string;
+//   };
+// };
+
+type Author = {
   name: string;
+  age: number;
   email: string;
 };
 
-function fetchUser() {
-  return user as User;
+type Post2 = {
+  title: string;
+  content: string;
+  date: Date;
+  author: Author;
+};
+
+let post3: Post2 = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+  author: {
+    name: "John",
+    age: 28,
+    email: "john@doe.com",
+  },
+};
+
+/**
+ * Index signatures with objects
+ */
+type Author2 = {
+  name: string;
+  age: number;
+  email: string;
+};
+
+type AwardDetails = {
+  name: string;
+  date: Date;
+};
+
+type Awards = {
+  [key: string]: AwardDetails;
+};
+
+type Post3 = {
+  title: string;
+  content: string;
+  date: Date;
+  author: Author2;
+  awards: Awards;
+};
+
+let post4: Post3 = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+  author: {
+    name: "John",
+    age: 28,
+    email: "john@doe.com",
+  },
+  awards: {
+    web: {
+      name: "Web awards",
+      date: new Date(),
+    },
+    web3: {
+      name: "Web 3",
+      date: new Date(),
+    },
+  },
+};
+
+/**
+ * Optional and Readonly properties
+ */
+
+type Author3 = {
+  name: string;
+  age: number;
+  email: string;
+  readonly type: "human" | "ai";
+};
+
+type Post4 = {
+  title: string;
+  content: string;
+  date: Date;
+  author: Author3;
+  awards: Awards;
+  category?: string;
+};
+
+let post5: Post4 = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+  author: {
+    name: "John",
+    age: 28,
+    email: "john@doe.com",
+    type: "human",
+  },
+  awards: {
+    web: {
+      name: "Web awards",
+      date: new Date(),
+    },
+    web3: {
+      name: "Web 3",
+      date: new Date(),
+    },
+  },
+  category: "javascript",
+};
+
+let post6: Post4 = {
+  title: "This is the title of the blog post",
+  content: "This is the content of the post",
+  date: new Date(),
+  author: {
+    name: "John",
+    age: 28,
+    email: "john@doe.com",
+    type: "human",
+  },
+  awards: {
+    web: {
+      name: "Web awards",
+      date: new Date(),
+    },
+    web3: {
+      name: "Web 3",
+      date: new Date(),
+    },
+  },
+};
+
+post6.author.type = "ai";
+
+/**
+ * Union types with object
+ */
+type Dog = {
+  name: string;
+  barks: boolean;
+  wags: boolean;
+};
+
+type Cat = {
+  name: string;
+  purrs: boolean;
+};
+
+type DogAndCatUnion = Dog | Cat;
+
+let dog: DogAndCatUnion = {
+  name: "Buddy",
+  barks: true,
+  wags: true,
+};
+
+let cat: DogAndCatUnion = {
+  name: "Bella",
+  purrs: true,
+};
+
+let hybridAnimal: DogAndCatUnion = {
+  name: "Bob",
+  barks: true,
+  wags: true,
+  purrs: true,
+};
+
+let partialDog: DogAndCatUnion = {
+  name: "Blacky",
+  barks: true,
+};
+
+/**
+ * Discriminating union
+ */
+type NetworkLoadingState = {
+  state: "loading";
+};
+
+type NetworkFailedState = {
+  state: "failed";
+  code: number;
+};
+
+type NetworkSuccessState = {
+  state: "success";
+  response: {
+    title: string;
+    duration: number;
+    summary: string;
+  };
+};
+
+type NetworkState =
+  | NetworkLoadingState
+  | NetworkFailedState
+  | NetworkSuccessState;
+
+function logger(state: NetworkState) {
+  switch (state.state) {
+    case "loading":
+      return "Loading...";
+
+    case "failed":
+      return `Error ${state.code}`;
+
+    case "success":
+      return `Downloading ${state.response.title}`;
+
+    default:
+      break;
+  }
 }
 
-let fetchedUser = fetchUser();
+/**
+ * Intersection types
+ */
+type Dog2 = {
+  name: string;
+  barks: boolean;
+  color: string;
+};
+
+type Cat2 = {
+  name: string;
+  purrs: boolean;
+  color: string;
+};
+
+type HybridAnimal = Dog2 & Cat2;
+
+let hybridAnimal2: HybridAnimal = {
+  name: "Max",
+  color: "White",
+  purrs: false,
+  barks: true,
+};
