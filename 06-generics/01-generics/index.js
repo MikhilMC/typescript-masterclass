@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Generics
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 function returnParams(param) {
     return param;
 }
@@ -12,3 +10,4 @@ const myParam = (param) => param;
 const myParam2 = function (param) {
     return param;
 };
+export {};

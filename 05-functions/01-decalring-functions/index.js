@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Declaring Functions
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 //* Named function
 /**
  ** Function returns an intro string
@@ -21,3 +19,4 @@ const intro2 = function (name, age) {
 const intro3 = (name, age) => {
     return 12334;
 };
+export {};

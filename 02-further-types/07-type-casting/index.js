@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Type Casting
  */
@@ -14,3 +12,4 @@ function fetchUser() {
     return user;
 }
 let fetchedUser = fetchUser();
+export {};

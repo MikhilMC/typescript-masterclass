@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * unknown Type
  */
@@ -12,3 +10,4 @@ function multiplyByTwo(number) {
 }
 console.log(multiplyByTwo(4));
 console.log(multiplyByTwo("string"));
+export {};

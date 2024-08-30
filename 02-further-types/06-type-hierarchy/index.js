@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const throwError = (errorMessage) => {
     //* throwError returns the type never
     throw new Error(errorMessage);
@@ -9,3 +7,4 @@ const throwError = (errorMessage) => {
 //* But this is more suitable one
 let strings = ["a", "b"];
 let myFunc = () => 2;
+export {};

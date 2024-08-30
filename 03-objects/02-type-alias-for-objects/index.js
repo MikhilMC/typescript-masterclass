@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Type Alias For Objects
  */
@@ -13,3 +11,4 @@ let post2 = {
     content: "This is the content of the post",
     date: new Date(),
 };
+export {};

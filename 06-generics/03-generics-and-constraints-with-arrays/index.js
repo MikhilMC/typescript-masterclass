@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function logLength(item) {
     console.log(item.length);
 }
@@ -12,3 +10,4 @@ console.log(logLength("stringArray"));
 //! and 'name' does not exist in type 'HasLength'.
 //* console.log(logLength({ name: "John" }));
 console.log(logLength({ name: "John", length: 12 }));
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Symbol
  */
@@ -17,3 +15,4 @@ console.log(user2.name);
 //* console.log(user2.id);
 console.log(id);
 console.log(user2.getId());
+export {};

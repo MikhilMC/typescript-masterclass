@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Async Functions
  */
@@ -11,3 +9,4 @@ async function returnString(id) {
 async function returnUser(id) {
     return Promise.resolve({ name: "John", age: 28 });
 }
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function logger(state) {
     switch (state.state) {
         case "loading":
@@ -12,3 +10,4 @@ function logger(state) {
             break;
     }
 }
+export {};

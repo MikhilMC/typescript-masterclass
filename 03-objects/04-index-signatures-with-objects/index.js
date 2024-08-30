@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let post = {
     title: "This is the title of the blog post",
     content: "This is the content of the post",
@@ -20,3 +18,4 @@ let post = {
         },
     },
 };
+export {};

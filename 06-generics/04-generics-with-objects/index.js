@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let stringNumberPair = {
     key: "age",
     value: 30,
@@ -24,3 +22,4 @@ const product = {
 //* console.log(printId(product));
 const newProduct = { ...product, id: 123 };
 console.log(printId(newProduct));
+export {};

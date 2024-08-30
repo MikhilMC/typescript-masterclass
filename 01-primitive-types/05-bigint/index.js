@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Bigint
  */
@@ -14,3 +12,4 @@ let bigint2 = 123434543n;
 console.log(bigInt1);
 console.log(bigint2);
 let c = bigInt1 - bigint2;
+export {};

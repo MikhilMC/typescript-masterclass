@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * null And undefined
  */
@@ -17,3 +15,4 @@ if (!userRole) {
 if (!user) {
     console.log("This condition is true");
 }
+export {};

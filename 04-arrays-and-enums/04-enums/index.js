@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Enums
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var Direction;
 (function (Direction) {
     Direction[Direction["Up"] = 0] = "Up";
@@ -39,3 +37,4 @@ var Direction3;
     Direction3[Direction3["Left"] = 3] = "Left";
     Direction3["Right"] = "right";
 })(Direction3 || (Direction3 = {}));
+export {};

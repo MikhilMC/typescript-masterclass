@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // Practice Questions
 //* 1. Create an array numbers that only accepts numbers and another array strings that only accepts strings.
 let numbers = [1, 2, 3];
@@ -26,3 +24,4 @@ const Status = {
     Inactive: "inactive",
     Pending: "pending",
 };
+export {};

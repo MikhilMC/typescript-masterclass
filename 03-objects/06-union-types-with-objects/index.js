@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let dog = {
     name: "Buddy",
     barks: true,
@@ -15,3 +13,4 @@ let hybridAnimal = {
     wags: true,
     purrs: true,
 };
+export {};

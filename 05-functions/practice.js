@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Practice Excercise for functions
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 //* 1. Declare a function named greet that takes a string parameter name and returns a greeting message.
 function greet(name) {
     return `Hello ${name}`;
@@ -19,3 +17,4 @@ function logMessage(message) {
 function throwError(message) {
     throw new Error(message);
 }
+export {};

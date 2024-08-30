@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Number Types
  */
@@ -9,3 +7,4 @@ const numberOfMembers = 61;
 //! Cannot assign to 'numberOfMembers' because it is a constant.
 //* numberOfMembers = 128;
 let stringToNumber = parseInt("1985");
+export {};

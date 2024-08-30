@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Computed Enums
  */
@@ -14,3 +12,4 @@ var AccessPermissions;
 })(AccessPermissions || (AccessPermissions = {}));
 console.log(AccessPermissions.ReadWrite);
 console.log(AccessPermissions.All);
+export {};

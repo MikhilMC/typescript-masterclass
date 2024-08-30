@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Function Overloading
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 const str = "Hello, World!";
 const part1 = str.slice(7);
 const part2 = str.slice(7, 10);
@@ -30,3 +28,4 @@ const reserve = (departureDate, returnDateOrDepartingFrom, departingFromOrDestin
 };
 console.log(reserve(new Date(), new Date(), "New York", "Washington"));
 console.log(reserve(new Date(), "New York", "Washington"));
+export {};

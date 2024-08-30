@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * String Types
  */
@@ -10,3 +8,4 @@ let automobile = "BMW";
 const city = "New York";
 let students = 32;
 let studentsAsString = students.toString();
+export {};

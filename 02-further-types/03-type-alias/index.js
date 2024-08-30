@@ -1,4 +1,3 @@
-"use strict";
 /*
  * Type Alias
  */
@@ -13,7 +12,6 @@
 // Symbol;
 // WeakMap;
 // WeakSet;
-Object.defineProperty(exports, "__esModule", { value: true });
 //* Annotation - when you are assigning a type.
 let firstName = "Mark";
 let age = 31;
@@ -24,3 +22,4 @@ function addNumbers(a, b) {
 }
 //* Inference - When TypeScript able to infer the correct type of a variable or declaration
 let finalResult = addNumbers(2, 3);
+export {};

@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Custom Parameters And Return Types
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var AgeUnit;
 (function (AgeUnit) {
     AgeUnit["Years"] = "years";
@@ -21,3 +19,4 @@ function convertAgeToMonths(person) {
     return person;
 }
 console.log(convertAgeToMonths(person));
+export {};

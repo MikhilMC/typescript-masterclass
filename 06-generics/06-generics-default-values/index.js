@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Generic Default Values
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 async function fetchData(url) {
     const response = await fetch(url);
     const data = await response.json();
@@ -18,3 +16,4 @@ async function fetchPost() {
     console.log(data);
 }
 fetchPost();
+export {};

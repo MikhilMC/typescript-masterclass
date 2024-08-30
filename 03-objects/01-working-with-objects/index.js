@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Working With Objects
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 let person = {
     name: "Mark",
     age: 32,
@@ -18,3 +16,4 @@ let newCar = {
     brand: "Audi",
     color: "White",
 };
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Enums As Unions And Type
  */
@@ -19,3 +17,4 @@ function printShape(shape /** Circle | Square */) {
 //! Argument of type 'typeof ShapeKind' is not assignable to parameter of type 'ShapeKind'.
 //* printShape(ShapeKind);
 printShape(ShapeKind.Circle);
+export {};

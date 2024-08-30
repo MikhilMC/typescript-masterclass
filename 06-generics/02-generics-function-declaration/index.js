@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Generic Function Declaration
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 //* This function can be used for any kind of type
 const getFirstElement = (arr) => {
     return arr[0];
@@ -22,3 +20,4 @@ const firstElementNumber = (arr) => {
 //! Type 'number' is not assignable to type 'string'.
 //* console.log(firstElement([1, 2, 3]));
 console.log(firstElement(["1", "2", "3"]));
+export {};

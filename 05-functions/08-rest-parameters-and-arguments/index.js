@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Rest Parameters And Arguments
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 function multiplyBy(by, ...numbers) {
     return numbers.map((number) => number * by);
 }
@@ -15,3 +13,4 @@ const args2 = [8, 5];
 const angle2 = Math.atan2(...args2);
 const args3 = [8, 5];
 const angle3 = Math.atan2(...args3);
+export {};

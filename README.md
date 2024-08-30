@@ -55,3 +55,11 @@
    - [Implementing A Polymorphic Function](./06-generics/07-implementing-a-polymorphic-function/index.ts)
    - [Problems With Function Overloading](./06-generics/08-problems-with-function-overloading/index.ts)
    - [Using Generics Instead Of Function Overloading](./06-generics/09-using-generics-instead-of-function-overloading/index.ts)
+7. [CLASSES](./07-classes/)
+   - [Creating First Class And Instance](./07-classes/01-creating-first-class-and-instance/index.ts)
+   - [constructor Function](./07-classes/02-constructor-function/index.ts)
+   - [this Keyword](./07-classes/03-this-keyword/index.ts)
+   - [Classes As Types](./07-classes/04-classes-as-types/index.ts)
+   - [Optional And Readonly Types](./07-classes/05-optional-and-readonly-properties/index.ts)
+   - [Inheritance](./07-classes/06-inheritance/index.ts)
+   - []

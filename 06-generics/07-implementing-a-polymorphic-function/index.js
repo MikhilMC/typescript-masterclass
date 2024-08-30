@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Implementing A Polymorphic Function
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 const filter = (array, predicate) => {
     const result = [];
     for (let i = 0; i < array.length; i++) {
@@ -22,3 +20,4 @@ function filterRat(item) {
 }
 console.log(filter(numbers, predicate));
 console.log(filter(animals, filterRat));
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let idOfEvents = "id";
 let dateOfEvents = "date";
 let stringObject = {
@@ -11,3 +9,4 @@ console.log(stringObject["0"]);
 let partial = {
     name: "John",
 };
+export {};

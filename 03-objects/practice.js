@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let airplane = {
     model: "Airbus A380",
     flightNumber: "A2201",
@@ -16,3 +14,4 @@ let airplane = {
         A3: "Sam Doe",
     },
 };
+export {};

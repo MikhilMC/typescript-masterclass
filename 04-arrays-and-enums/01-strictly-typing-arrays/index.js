@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Strictly Typing Arrays
  */
@@ -24,3 +22,4 @@ let airplanes = [
         },
     },
 ];
+export {};

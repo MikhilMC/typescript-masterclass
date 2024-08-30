@@ -1,8 +1,6 @@
-"use strict";
 /*
  * Function Call Signatures
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var AgeUnit;
 (function (AgeUnit) {
     AgeUnit["Years"] = "years";
@@ -17,3 +15,4 @@ let person2 = {
     },
 };
 console.log(person2.greet("Hello"));
+export {};

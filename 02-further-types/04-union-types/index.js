@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let stringOrNumber = 1234;
 function print(input) {
     if (input) {
@@ -12,3 +10,4 @@ function print(input) {
 //! Expected 1 arguments, but got 0.
 //* print();
 print("Hello World!");
+export {};

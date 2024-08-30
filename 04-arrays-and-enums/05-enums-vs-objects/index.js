@@ -1,8 +1,6 @@
-"use strict";
 /**
  * Enums Vs Objects
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var Direction;
 (function (Direction) {
     Direction[Direction["Up"] = 0] = "Up";
@@ -18,3 +16,4 @@ const ODirection = {
 };
 let eDirection = 0 /* EDirection.Up */;
 let direction = Direction.Up;
+export {};

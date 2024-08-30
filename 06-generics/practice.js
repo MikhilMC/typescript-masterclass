@@ -1,7 +1,5 @@
-"use strict";
 //* Typescript implementation of JavaScript array map function
 //* with Generics and Strictly typing
-Object.defineProperty(exports, "__esModule", { value: true });
 const map = (array, execute) => {
     if (array.length === 0) {
         return array;
@@ -25,3 +23,4 @@ const map2 = (array, func) => {
 let numbers = [4, 5, 6, 7, 8];
 const converted = map2(numbers, (num) => num.toString());
 console.log(converted);
+export {};

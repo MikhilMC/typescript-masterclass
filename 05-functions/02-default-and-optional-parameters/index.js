@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Default And Optional Parameters
  */
@@ -13,3 +11,4 @@ function intro(name, age, country) {
 }
 console.log(intro("John", 32));
 console.log(intro("John", 32, "USA"));
+export {};
