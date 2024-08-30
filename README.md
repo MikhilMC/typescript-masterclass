@@ -2,14 +2,14 @@
 
 ## Chapters
 
-1. [Primitive Types](./primitive-types/)
+1. [PRIMITIVE TYPES](./primitive-types/)
    - [String Types](./primitive-types/string-types/index.ts)
    - [Number Types](./primitive-types/number-types/index.ts)
    - [Booleans](./primitive-types/booleans/index.ts)
    - [null And undefined](./primitive-types/null-and-undefined/index.ts)
    - [Bigint](./primitive-types/bigint/index.ts)
    - [Symbol](./primitive-types/symbol/index.ts)
-2. [Further Types](./further-types/)
+2. [FURTHER TYPES](./further-types/)
    - [any Type](./further-types/any-type/index.ts)
    - [unknown Type](./further-types/unknown-type/index.ts)
    - [Type Alias](./further-types/type-alias/index.ts)
@@ -17,7 +17,7 @@
    - [Conditional Types](./further-types/conditional-types/index.ts)
    - [Type Hierarchy](./further-types/type-hierarchy/index.ts)
    - [Type Casting](./further-types/type-casting/index.ts)
-3. [Objects](./objects/)
+3. [OBJECTS](./objects/)
    - [Working With Objects](./objects/working-with-objects/index.ts)
    - [Type Alias For Objects](./objects/type-alias-for-objects/index.ts)
    - [Nested Objects](./objects/nested-objects/index.ts)
