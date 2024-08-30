@@ -1,5 +1,5 @@
 /*
- * Index signatures with objects
+ * Index Signatures With Objects
  */
 type Author = {
   name: string;

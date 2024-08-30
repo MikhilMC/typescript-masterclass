@@ -1,5 +1,5 @@
 /*
- * Number types
+ * Number Types
  */
 var age: number = 32;
 let year: number = 2024;

@@ -1,5 +1,5 @@
 /*
- * Type alias for objects
+ * Type Alias For Objects
  */
 let post: {
   title: string;

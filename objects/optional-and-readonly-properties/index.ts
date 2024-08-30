@@ -1,5 +1,5 @@
 /*
- * Optional and Readonly properties
+ * Optional And Readonly Properties
  */
 
 type AwardDetails = {

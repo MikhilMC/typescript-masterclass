@@ -1,5 +1,5 @@
 /*
- * null and undefined
+ * null And undefined
  */
 let user: undefined;
 console.log(user);

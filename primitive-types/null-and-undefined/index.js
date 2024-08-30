@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
- * null and undefined
+ * null And undefined
  */
 let user;
 console.log(user);

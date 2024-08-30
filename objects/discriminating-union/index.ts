@@ -1,5 +1,5 @@
 /*
- * Discriminating union
+ * Discriminating Union
  */
 type NetworkLoadingState = {
   state: "loading";

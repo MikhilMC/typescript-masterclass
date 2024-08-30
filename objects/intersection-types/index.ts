@@ -1,5 +1,5 @@
 /*
- * Intersection types
+ * Intersection Types
  */
 type Dog = {
   name: string;

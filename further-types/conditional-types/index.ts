@@ -1,4 +1,4 @@
-/**
+/*
  * Conditional Types
  */
 type CustomDate = Date;

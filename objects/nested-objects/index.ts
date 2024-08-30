@@ -1,5 +1,5 @@
 /*
- * Nested objects
+ * Nested Objects
  */
 
 type Post = {

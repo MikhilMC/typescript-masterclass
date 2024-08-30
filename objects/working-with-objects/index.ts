@@ -1,5 +1,5 @@
 /*
- * Working with objects
+ * Working With Objects
  */
 
 let person = {

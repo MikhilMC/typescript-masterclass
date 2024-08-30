@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
- * Type alias for objects
+ * Type Alias For Objects
  */
 let post = {
     title: "This is the title of the blog post",

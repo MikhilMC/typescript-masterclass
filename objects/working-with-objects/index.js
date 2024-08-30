@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Working with objects
+ * Working With Objects
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 let person = {

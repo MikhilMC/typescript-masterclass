@@ -1,5 +1,5 @@
 /*
- * Union types with object
+ * Union Types With Object
  */
 type Dog = {
   name: string;

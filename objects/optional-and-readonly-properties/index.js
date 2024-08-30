@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Optional and Readonly properties
+ * Optional And Readonly Properties
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 let post = {

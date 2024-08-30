@@ -1,5 +1,5 @@
 /*
- * Union types
+ * Union Types
  */
 type StringOrNumber = string | number;
 type NumberOrUndefined = number | undefined;

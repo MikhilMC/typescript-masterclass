@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
- * Number types
+ * Number Types
  */
 var age = 32;
 let year = 2024;

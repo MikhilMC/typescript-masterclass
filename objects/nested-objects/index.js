@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Nested objects
+ * Nested Objects
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 let post = {
