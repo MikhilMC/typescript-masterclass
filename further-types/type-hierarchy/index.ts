@@ -1,0 +1,25 @@
+/*
+ * Type Hierarchy
+ */
+type check = any extends unknown ? true : false;
+type check2 = string extends any ? true : false;
+type check3 = null extends any ? true : false;
+type check4 = undefined extends void ? true : false;
+type check5 = [] extends Object ? true : false;
+type check6 = Function extends Object ? true : false;
+
+const throwError = (errorMessage: string) => {
+  //* throwError returns the type never
+  throw new Error(errorMessage);
+};
+
+//* This is acceptable according to TypeScript
+//* let strings:Object = ["a", "b"]
+
+//* But this is more suitable one
+let strings: string[] = ["a", "b"];
+
+let myFunc: Function = () => 2;
+//* let myFunc: Object = () => 2;
+
+export {};
