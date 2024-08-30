@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Bigint
  */
@@ -13,7 +14,3 @@ let bigint2 = 123434543n;
 console.log(bigInt1);
 console.log(bigint2);
 let c = bigInt1 - bigint2;
-//! A bigint literal must be an integer.
-//* let d: bigint = 12345.6n;
-//! Argument of type 'bigint' is not assignable to parameter of type 'number'.
-//* let f = Math.log(bigInt1);

@@ -20,3 +20,4 @@ let c: bigint = bigInt1 - bigint2;
 
 //! Argument of type 'bigint' is not assignable to parameter of type 'number'.
 //* let f = Math.log(bigInt1);
+export {};
