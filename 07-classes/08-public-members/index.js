@@ -1,11 +1,13 @@
 /*
- * super Method
+ * public Members
  */
 class User {
     constructor(name, email, lastname) {
         this.name = name;
         this.email = email;
-        this.lastname = lastname;
+        if (lastname) {
+            this.lastname = lastname;
+        }
     }
     greet() {
         return `Hello ${this.name}`;
@@ -17,7 +19,12 @@ class Admin extends User {
         this.isAdmin = true;
         this.usersReporting = usersReporting;
     }
+    printName() {
+        console.log(this.name);
+    }
 }
+const user = new User("John", "john@email.com");
 const admin = new Admin("Mark", "mark@email.com", 11);
-console.log(admin);
+console.log(user.name);
+admin.printName();
 export {};

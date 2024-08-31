@@ -1,19 +1,21 @@
 /*
- * super Method
+ * public Members
  */
 
 class User {
-  name: string;
+  public name: string;
   readonly email: string;
   lastname?: string;
 
   constructor(name: string, email: string, lastname?: string) {
     this.name = name;
     this.email = email;
-    this.lastname = lastname;
+    if (lastname) {
+      this.lastname = lastname;
+    }
   }
 
-  greet() {
+  public greet() {
     return `Hello ${this.name}`;
   }
 }
@@ -31,9 +33,16 @@ class Admin extends User {
     super(name, email, lastname);
     this.usersReporting = usersReporting;
   }
+
+  public printName(): void {
+    console.log(this.name);
+  }
 }
 
-const admin = new Admin("Mark", "mark@email.com", 11);
-console.log(admin);
+const user: User = new User("John", "john@email.com");
+const admin: Admin = new Admin("Mark", "mark@email.com", 11);
+
+console.log(user.name);
+admin.printName();
 
 export {};
