@@ -11,7 +11,7 @@
    5. [Bigint](./01-primitive-types/05-bigint/index.ts)
    6. [Symbol](./01-primitive-types/06-symbol/index.ts)
 
-   - [Practice Assignment](./01-primitive-types/practice/practice.ts)
+   [Practice Assignment](./01-primitive-types/practice/practice.ts)
 
 2. [FURTHER TYPES](./02-further-types/)
 
@@ -23,7 +23,7 @@
    6. [Type Hierarchy](./02-further-types/06-type-hierarchy/index.ts)
    7. [Type Casting](./02-further-types/07-type-casting/index.ts)
 
-   - [Practice Assignment](./02-further-types/practice/practice.ts)
+   [Practice Assignment](./02-further-types/practice/practice.ts)
 
 3. [OBJECTS](./03-objects/)
 
@@ -36,7 +36,7 @@
    7. [Discriminating Union](./03-objects/07-discriminating-union/index.ts)
    8. [Intersection Types](./03-objects/08-intersection-types/index.ts)
 
-   - [Practice Assignment](./03-objects/practice/practice.ts)
+   [Practice Assignment](./03-objects/practice/practice.ts)
 
 4. [ARRAYS AND ENUMS](./04-arrays-and-enums/)
 
@@ -48,9 +48,10 @@
    6. [Computed Enums](./04-arrays-and-enums/06-computed-enums/index.ts)
    7. [Enums As Unions And Type](./04-arrays-and-enums/07-enums-as-unions-and%20types/index.ts)
 
-   - [Practice Assignment](./04-arrays-and-enums/practice/practice.ts)
+   [Practice Assignment](./04-arrays-and-enums/practice/practice.ts)
 
 5. [FUNCTIONS](./05-functions/)
+
    1. [Declaring Functions](./05-functions/01-decalring-functions/index.ts)
    2. [Default And Optional Parameters](./05-functions/02-default-and-optional-parameters/index.ts)
    3. [Custom Parameters And Return Types](./05-functions/03-custom-parameters-and-return-types/index.ts)
@@ -61,8 +62,11 @@
    8. [Rest Parameters And Arguments](./05-functions/08-rest-parameters-and-arguments/index.ts)
    9. [Parameter Destructuring](./05-functions/09-parameter-destructuring/index.ts)
    10. [Function Overloading](./05-functions/10-function-overloading/index.ts)
-   - [Practice Assignment](./04-arrays-and-enums/practice/practice.ts)
+
+   [Practice Assignment](./04-arrays-and-enums/practice/practice.ts)
+
 6. [GENERICS](./06-generics/)
+
    1. [Generics](./06-generics/01-generics/index.ts)
    2. [Generic Function Declaration](./06-generics/02-generics-function-declaration/index.ts)
    3. [Generics And Constraints With Arrays](./06-generics/03-generics-and-constraints-with-arrays/index.ts)
@@ -72,8 +76,11 @@
    7. [Implementing A Polymorphic Function](./06-generics/07-implementing-a-polymorphic-function/index.ts)
    8. [Problems With Function Overloading](./06-generics/08-problems-with-function-overloading/index.ts)
    9. [Using Generics Instead Of Function Overloading](./06-generics/09-using-generics-instead-of-function-overloading/index.ts)
-   - [Practice Assignment](./06-generics/practice/practice.ts)
+
+   [Practice Assignment](./06-generics/practice/practice.ts)
+
 7. [CLASSES](./07-classes/)
+
    1. [Creating First Class And Instance](./07-classes/01-creating-first-class-and-instance/index.ts)
    2. [constructor Function](./07-classes/02-constructor-function/index.ts)
    3. [this Keyword](./07-classes/03-this-keyword/index.ts)
@@ -95,5 +102,7 @@
    19. [Generics Use Case](./07-classes/19-generics-use-case/index.ts)
    20. [Concrete Implementation With User Type](./07-classes/20-concrete-implementation-with-user-type/index.ts)
    21. [Composing New Classes With Mixins](./07-classes/21-composing-new-classes-with-mixins/index.ts)
-   - [Practice Assignment - 1](./07-classes/practice1/practice1.ts)
-   - [Practice Assignment - 2](./07-classes/practice2/practice2.ts)
+
+   [Practice Assignment - 1](./07-classes/practice1/practice1.ts)
+
+   [Practice Assignment - 2](./07-classes/practice2/practice2.ts)
