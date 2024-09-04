@@ -1,0 +1,4 @@
+/*
+ * Interfaces And Generics
+ */
+export {};
