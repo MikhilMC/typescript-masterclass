@@ -1,0 +1,28 @@
+# ABSTRACT CLASSES AND INTERFACES
+
+## SUB CHAPTERS
+
+1. [Introduction To Abstract Classes](./01-introduction-to-abstract-classes/index.ts)
+2. [Shared methods in Abstract Classes](./02-shared-methods-in-abstract-classes/index.ts)
+3. [Protected Constructor And Child Classes](./03-protected-constructor-and-child-classes/index.ts)
+4. [Adding Holidays To Classes](./04-adding-holidays-to-classes/index.ts)
+5. [Print Holidays Method](./05-print-holidays-method/index.ts)
+6. [Method Overriding In Child Class](./06-method-overriding-in-child-class/index.ts)
+7. [Introduction To Abstract Methods](./07-introduction-to-abstract-methods/index.ts)
+8. [Introduction To Interfaces](./08-introduction-to-interfaces/index.ts)
+9. [Introduction To Interfaces - 2](./09-introduction-to-interfaces-2/index.ts)
+10. [Extending Interfaces Using extends Keyword](./10-extending-interfaces-using-extends-keyword/index.ts)
+11. [Inheriting From Multiple Interfaces](./11-inheriting-from-multiple-interfaces/index.ts)
+12. [Interfaces And Generics](./12-interfaces-and-generics/index.ts)
+13. [Assigning Generics To Interfaces](./13-assigning-generics-to-interfaces/index.ts)
+14. [Using Multiple Types As Generics](./14-using-multiple-types-as-generics/index.ts)
+15. [Using Interfaces With Classes](./15-using-interfaces-with-classes/index.ts)
+16. [Multiple Classes Using the Same Interface](./16-multiple-classes-using-the-same-interface/index.ts)
+17. [Implementing Multiple Interfaces](./17-implementing-multiple-interfaces/index.ts)
+18. [Multiple Inheritance In Classes Using Interfaces](./18-multiple-inheritance-in-classes-using-interfaces/index.ts)
+19. [Interfaces And Access Modifiers](./19-interfaces-and-access-modifiers/index.ts)
+20. [Declaration Merging Interfaces](./20-declaration-merging-interfaces/index.ts)
+21. [Difference Between A Type And An Interface](./21-difference-between-a-type-and-an-interface/index.ts)
+22. [Difference Between An Abstract Class And An Interface](./22-difference-between-an-abstract-class-and-an-interface/index.ts)
+23. [Difference Between An Abstract Class And An Interface - 2](./23-difference-between-an-abstract-class-and-an-interface-2/index.ts)
+24. [What Should You Use? Abstract Class Or Interfaces](./24-what-should-you-use-abstract-class-or-interfaces/index.ts)
