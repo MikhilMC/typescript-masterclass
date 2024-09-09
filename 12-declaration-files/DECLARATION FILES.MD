@@ -1,6 +1,6 @@
 # DECLARATION FILES
 
-## SUBCHAPTERS
+## SUB CHAPTERS
 
 1. [First Declaration File](./1-first-declaration-file/src/app.ts)
 2. [Reusable Types With Interfaces](./2-reusable-types-with-interfaces/src/app.ts)

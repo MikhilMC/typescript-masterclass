@@ -14,3 +14,4 @@
 10. [DECORATORS IN TYPESCRIPT](./10-decorators-in-typescript/)
 11. [NAMESPACES AND MODULES](./11-namespaces-and-modules/)
 12. [DECLARATION FILES](./12-declaration-files/)
+13. [ADVANCED CONCEPTS AND FEATURES](./13-advanced-concepts-and-features/)

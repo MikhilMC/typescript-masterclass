@@ -1,6 +1,6 @@
 # NAMESPACES AND MODULES
 
-## SUBCHAPTERS
+## SUB CHAPTERS
 
 1. [Starting With Namespaces](./1-starting-with-namespaces/app.ts)
 2. [Namespaces In Multiple Files](./2-namespaces-in-multiple-files/src/app.ts)
