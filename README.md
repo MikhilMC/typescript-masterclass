@@ -13,3 +13,4 @@
 9. [PROTOTYPES AND OBJECTS](./09-prototypes-and-objects/)
 10. [DECORATORS IN TYPESCRIPT](./10-decorators-in-typescript/)
 11. [NAMESPACES AND MODULES](./11-namespaces-and-modules/)
+12. [DECLARATION FILES](./12-declaration-files/)
