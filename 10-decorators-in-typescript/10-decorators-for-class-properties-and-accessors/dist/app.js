@@ -1,3 +1,4 @@
+"use strict";
 /*
  * Decorators For Class Properties And Accessors
  */
@@ -10,14 +11,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-function PropertyDecorator(classPrototype, propertyName) {
-    console.log(classPrototype);
-    console.log(propertyName);
+function PropertyDecorator() {
+    return function FieldDecorator(target, propertyKey) {
+        console.log(target);
+        const fieldName = propertyKey;
+        console.log(`Accessing the ${fieldName}`);
+    };
 }
-function AccessorDecorator(classPrototype, accessorName, propertyDescriptor) {
-    console.log(classPrototype);
-    console.log(accessorName);
-    console.log(propertyDescriptor);
+function AccessorDecorator() {
+    return function GetterDecorator(target, propertyKey, descriptor) {
+        const originalGetter = descriptor.get;
+        descriptor.get = function () {
+            console.log(target);
+            console.log(`${propertyKey} was accessed`);
+            return originalGetter.call(this);
+        };
+        return descriptor;
+    };
 }
 class Airplane {
     constructor(aircraftModel) {
@@ -34,12 +44,13 @@ class Airplane {
     }
 }
 __decorate([
-    PropertyDecorator,
+    PropertyDecorator(),
     __metadata("design:type", String)
 ], Airplane.prototype, "_aircraftModel", void 0);
 __decorate([
-    AccessorDecorator,
+    AccessorDecorator(),
     __metadata("design:type", Object),
     __metadata("design:paramtypes", [])
 ], Airplane.prototype, "aircraftModel", null);
-export {};
+const airplane = new Airplane("Boeing");
+console.log(airplane.aircraftModel);
