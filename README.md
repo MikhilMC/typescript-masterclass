@@ -15,3 +15,4 @@
 11. [NAMESPACES AND MODULES](./11-namespaces-and-modules/)
 12. [DECLARATION FILES](./12-declaration-files/)
 13. [ADVANCED CONCEPTS AND FEATURES](./13-advanced-concepts-and-features/)
+14. [TYPE GUARDS IN TYPESCRIPT](./14-type-guards-in-typescript/)
