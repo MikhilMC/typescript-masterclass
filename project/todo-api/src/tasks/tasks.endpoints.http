@@ -1,0 +1,15 @@
+### Fetch all tasks
+GET http://localhost:3200/tasks
+Content-Type: application/json
+
+### Create a new task
+POST http://localhost:3200/tasks
+Content-Type: application/json
+
+{
+    // "title": "Lorem ipsum",
+    "date": "2024-10-05T17:27:16.779Z",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "priority": "normal",
+    "status": "todo"
+}
